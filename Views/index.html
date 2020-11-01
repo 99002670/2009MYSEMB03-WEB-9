@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="stylesheet" href="../Styles/loginStyle.css">
+        <script src="../Scripts/jquery.min.js"></script>
+        <script src="../Scripts/loginValidate.js"></script>
+    </head>
+    <body>
+        <form
+            action=""
+            name="regForm"
+            novalidate="true"
+            onsubmit="return loginValidate()"
+        >
+            <h2>Log in</h2>
+            <div class="row">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" />
+                <div id="errEmail" class="err"></div>
+            </div>
+            <div class="row">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" />
+                <div id="errPhone" class="err"></div>
+            </div>
+            <div>
+				<button id="btn">Log In</button>
+				<br>
+            </div>
+            <div>
+                <a id="ref" href="signup.html">Not a member yet? Join us</a>
+            </div>
+        </form>
+    </body>
+</html>
