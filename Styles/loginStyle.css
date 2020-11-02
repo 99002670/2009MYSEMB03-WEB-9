@@ -10,7 +10,8 @@ body {
 }
 
 form {
-	background-color: rgb(121, 68, 147);;
+	/* background-color: rgb(121, 68, 147);*/
+	 background-image: linear-gradient(purple, violet);
 	width: 350px;
 	padding: 15px;
 	border: 2px solid lightgray;
