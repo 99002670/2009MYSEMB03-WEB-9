@@ -1,4 +1,4 @@
-# JS MiniProject
+## JS MiniProject
 
 <pre>
 (\ /)	  (\ /)     (\ /)
