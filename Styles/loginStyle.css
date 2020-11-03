@@ -1,3 +1,8 @@
+@-webkit-keyframes backgroundScroll {
+    from {background-position: 0 0;}
+    to {background-position: -180px 0px;}
+}
+
 body {
 	font-size: 16rw;
 	background-image: url("../Assests/Images/background.jpeg");
@@ -7,17 +12,23 @@ body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
 		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
 		"Helvetica Neue", sans-serif;
+	height: 100vh;
+	-webkit-animation: backgroundScroll 15s linear 1;
+    -webkit-animation-fill-mode: forwards;
+    animation: backgroundScroll 15s linear 1;
+    animation-fill-mode: forwards;
 }
 
 form {
 	/* background-color: rgb(121, 68, 147);*/
 	background-image: linear-gradient(purple, violet);
-	width: 350px;
+	width: 35vh;
 	padding: 15px;
 	border: 2px solid lightgray;
-	margin-top: 150px;
+	margin-top: 15vh;
 	margin-left: 70%;
 	border-radius: 5px;
+	box-shadow: inset;
 }
 
 label {
