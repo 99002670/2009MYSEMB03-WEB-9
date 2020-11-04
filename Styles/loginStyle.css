@@ -1,7 +1,12 @@
-@-webkit-keyframes backgroundScroll {
+/* @-webkit-keyframes backgroundScroll {
     from {background-position: 0 0;}
     to {background-position: -180px 0px;}
-}
+} */
+@keyframes breath {
+	0%   { background-size: 100% 100%; }
+	50% { background-size: 140% 140%; }
+	100% { background-size: 100% 100%; }
+  }
 
 body {
 	font-size: 16rw;
@@ -15,8 +20,9 @@ body {
 	height: 100vh;
 	-webkit-animation: backgroundScroll 15s linear 1;
     -webkit-animation-fill-mode: forwards;
-    animation: backgroundScroll 15s linear 1;
-    animation-fill-mode: forwards;
+    /* animation: backgroundScroll 15s linear 1;
+	animation-fill-mode: forwards; */
+	animation: breath 20s linear infinite;
 }
 
 form {
