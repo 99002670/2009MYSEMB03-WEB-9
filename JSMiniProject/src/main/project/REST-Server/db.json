@@ -1,0 +1,17 @@
+{
+  "userData": [
+    {
+      "name": "Amit Das",
+      "email": "dasamit98@gmail.com",
+      "password": "password",
+      "id": 1
+    },
+    {
+      "name": "Milind Mohapatra",
+      "email": "mohapatra.milind@gmail.com",
+      "password": "milind11",
+      "id": 2
+    }
+  ],
+  "songs": []
+}
