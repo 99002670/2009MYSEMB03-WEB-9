@@ -11,24 +11,30 @@
       function enter() {
         email_c = document.regForm.email.value;
         password_c = document.regForm.password.value;
-        // $.get("http://localhost:8000/userData").then((resp) => {
-        //   data = resp.data;
-        //   data.forEach((element) => {
-        //     console.log(`${e.name}, ${e.email}, ${e.password}`);
-        //   });
-        // });
-        // alert("Loged In");
+        $.get("http://localhost:8000/userData", (resp) => {
+          resp.forEach((element) => {
+            if (
+              email_c == `${element.email}` &&
+              password_c == `${element.password}`
+            ) {
+              window.location = "home.html";
+            } else {
+                alert("Incorrect Credential")
+              //do nothing
+            }
+          });
+        });
+        //alert("Logged In");
 
-        const promise = new Promise((success, failure) => 
-        {
-            const url = "http://localhost:8000/userData" 
-            $.get(url => {
-                console.log(this.userData)
-                success(this.userData)
-            })
-            
-        })
-        return promise
+        // const promise = new Promise((success, failure) =>
+        // {
+        //     const url = "http://localhost:8000/userData"
+        //     $.get(url => {
+        //         console.log(this.userData)
+        //         success(this.userData)
+        //     })
+
+        // })
       }
     </script>
   </head>
