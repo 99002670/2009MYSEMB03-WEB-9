@@ -12,7 +12,7 @@ import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-public class StepDefinition {
+public class StepDefinition1 {
 	WebDriver driver = null;
 
 	@Given("^I open the chrome browser$")
