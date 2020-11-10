@@ -15,7 +15,7 @@ Feature: Login page
 		Given I open the chrome browser3
     When I enter the URL3
     Then The login page should open3
-    When I do not enter email
+    When I do not enter email3
     And I click on Log In button3
     Then email mandatory error message should dislpay3
     When I enter invalid email3
