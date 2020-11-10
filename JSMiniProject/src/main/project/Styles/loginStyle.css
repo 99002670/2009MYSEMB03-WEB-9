@@ -18,7 +18,7 @@
 header{
 	padding-left: 30px;
 	padding-right: 30px;
-	opacity: 0.8;
+	
 }
 
 body {
@@ -41,6 +41,7 @@ body {
 form {
 	/* background-color: rgb(121, 68, 147);*/
 	background-image: linear-gradient(purple, violet);
+	position: absolute;
 	width: 35vh;
 	padding: 15px;
 	border: 2px solid lightgray;
