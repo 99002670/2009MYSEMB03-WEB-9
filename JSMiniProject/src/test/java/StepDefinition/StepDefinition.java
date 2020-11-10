@@ -19,6 +19,7 @@ public class StepDefinition {
 	public void i_open_the_chrome_browser() throws Throwable {
 		System.setProperty("webdriver.chrome.driver", "/home/milind/Downloads/chromedriver_linux64/chromedriver");
 		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 	}
 
 	@When("^I enter the URL$")
@@ -101,7 +102,12 @@ public class StepDefinition {
 
 	@Then("^I should sign up$")
 	public void i_should_sign_up() throws Throwable {
-		System.out.println("Sign up");
+		String expected = "Registered, Proceed to Login";
+		String actual = driver.switchTo().alert().getText();
+		Assert.assertEquals(expected, actual);
+		driver.switchTo().alert().accept();
+		Thread.sleep(3000);
+		driver.close();
 	}
 
 }
