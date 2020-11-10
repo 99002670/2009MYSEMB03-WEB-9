@@ -12,17 +12,22 @@
         email_c = document.regForm.email.value;
         password_c = document.regForm.password.value;
         $.get("http://localhost:8000/userData", (resp) => {
+          var status_flag = false;
           resp.forEach((element) => {
             if (
               email_c == `${element.email}` &&
-              password_c == `${element.password}`
+              password_c == `${element.password}` &&
+              status_flag == false
             ) {
               window.location = "home.html";
+              status_flag = true;
             } else {
-                alert("Incorrect Credential")
               //do nothing
             }
           });
+          if(status_flag==false){
+            alert("Invalid Credentials")
+          }
         });
       }
     </script>
