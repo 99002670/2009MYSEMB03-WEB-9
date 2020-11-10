@@ -106,7 +106,6 @@ public class StepDefinition {
 		String actual = driver.switchTo().alert().getText();
 		Assert.assertEquals(expected, actual);
 		driver.switchTo().alert().accept();
-		Thread.sleep(3000);
 		driver.close();
 	}
 
