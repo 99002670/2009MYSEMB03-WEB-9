@@ -17,7 +17,7 @@ public class StepDefinition3 {
 
 	@Given("^I open the chrome browser2$")
 	public void i_open_the_chrome_browser2() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "/home/milind/Downloads/chromedriver_linux64/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/home/amit/Selenium/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 	}
@@ -25,7 +25,7 @@ public class StepDefinition3 {
 	@When("^I enter the URL2$")
 	public void i_enter_the_url2() throws Throwable {
 		driver.get(
-				"file:///home/milind/Documents/JavaScript%20Codes/MiniProject/JSMiniProject/src/main/project/Views/index.html");
+				"file:///home/amit/Documents/porky/JS-MiniProject/JSMiniProject/src/main/project/Views/index.html");
 	}
 
 	@When("^I enter my email address2$")
