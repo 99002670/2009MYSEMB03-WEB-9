@@ -11,7 +11,7 @@
       function enter() {
         email_c = document.regForm.email.value;
         password_c = document.regForm.password.value;
-        $.get("http://localhost:8000/userData", (resp) => {
+        $.get("http://localhost:3000/userData", (resp) => {
           var status_flag = false;
           resp.forEach((element) => {
             if (
