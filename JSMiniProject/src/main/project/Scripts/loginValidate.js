@@ -5,7 +5,7 @@ function loginValidate() {
 	let email = document.regForm.email.value;
 	let password = document.regForm.password.value;
 
-	if (email == "") {
+	if (email == "" || null) {
 		showErr("errEmail", "Email is mandatory");
 		return false;
 	} else {
@@ -20,7 +20,7 @@ function loginValidate() {
 		showErr("errEmail", "");
 	}
 
-	if (password == "") {
+	if (password == "" || password == null) {
 		showErr("errPassword", "Password is mandatory");
 		return false;
 	} else {
