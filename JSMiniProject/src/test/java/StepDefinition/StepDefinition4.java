@@ -19,7 +19,7 @@ public class StepDefinition4 {
 	
     @Given("^I open the chrome browser3$")
     public void i_open_the_chrome_browser3() throws Throwable {
-    	System.setProperty("webdriver.chrome.driver", "/home/milind/Downloads/chromedriver_linux64/chromedriver");
+    	System.setProperty("webdriver.chrome.driver", "/home/amit/Selenium/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		}
@@ -27,7 +27,7 @@ public class StepDefinition4 {
     @When("^I enter the URL3$")
     public void i_enter_the_url3() throws Throwable {
     	driver.get(
-				"file:///home/milind/Documents/JavaScript%20Codes/MiniProject/JSMiniProject/src/main/project/Views/index.html");
+				"file:///home/amit/Documents/porky/JS-MiniProject/JSMiniProject/src/main/project/Views/index.html");
 	    }
 
     @When("^I do not enter email3$")
@@ -64,6 +64,7 @@ public class StepDefinition4 {
 
     @Then("^email mandatory error message should dislpay3$")
     public void email_mandatory_error_message_should_dislpay3() throws Throwable {
+    	driver.switchTo().alert().accept();
     	String expected = "Email is mandatory";
 		String actual = driver.findElement(By.id("errEmail")).getText();
 		Assert.assertEquals(expected, actual);
@@ -71,6 +72,7 @@ public class StepDefinition4 {
 
     @Then("^email invalid message should display3$")
     public void email_invalid_message_should_display3() throws Throwable {
+    	driver.switchTo().alert().accept();
     	String expected = "Email is not in a valid format";
 		String actual = driver.findElement(By.id("errEmail")).getText();
 		Assert.assertEquals(expected, actual);
@@ -78,17 +80,19 @@ public class StepDefinition4 {
 
     @Then("^password mandataory error message should display3$")
     public void password_mandataory_error_message_should_display3() throws Throwable {
+    	driver.switchTo().alert().accept();
     	String expected = "Password is mandatory";
-		String actual = driver.findElement(By.id("errEmail")).getText();
+		String actual = driver.findElement(By.id("errPassword")).getText();
 		Assert.assertEquals(expected, actual);
 		}
 
     @Then("^invalid credentials error message should display$")
     public void invalid_credentials_error_message_should_display() throws Throwable {
-    	String expected = "Invalid credentials";
-		String actual = driver.findElement(By.id("errEmail")).getText();
+    	String expected = "Invalid Credentials";
+		String actual = driver.switchTo().alert().getText();
 		Assert.assertEquals(expected, actual);
-		System.out.println("Invalid credentials");
+		driver.switchTo().alert().accept();
+		driver.close();
     }
 
     @And("^I click on Log In button3$")
