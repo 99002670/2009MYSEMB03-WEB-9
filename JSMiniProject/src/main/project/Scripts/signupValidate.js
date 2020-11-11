@@ -72,5 +72,21 @@ function signupValidate() {
 		showErr("errConfirmPassword", "");
 	}
 
+	userRegister();
 	return true;
 }
+
+function userRegister() {
+	var id = 0;
+	name_o = document.regForm.name.value;
+	email_o = document.regForm.email.value;
+	phone_o = document.regForm.phone.value;
+	password_o = document.regForm.password.value;
+	$.post("http://localhost:8000/userData", {
+		name: name_o,
+		email: email_o,
+		password: password_o,
+	  });
+	id = id + 1;
+	alert("Registered, Proceed to Login");
+  }
